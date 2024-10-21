@@ -18,7 +18,15 @@ console.log(sortByLength(fruits))
 
 
 function sortByLengthAsc(fruits) {
-    return fruits.sort((a, b) => a.length - b.length && a.localeCompare(b));
+    return fruits.sort((a,b) =>
+    {
+        if (a.length === b.length) {
+            return a.localeCompare(b);
+        }
+        else {
+            return a.length - b. length;
+        }
+    });
 }
 console.log(sortByLengthAsc(fruits))
 
